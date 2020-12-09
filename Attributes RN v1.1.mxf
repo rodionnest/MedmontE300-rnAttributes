@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<MedmontStudioExportFile version="3">
+	<PrimitiveAttribute version="3">
+		<ID>{24CB65C2-4F4F-44FB-81CC-9B6D9EA7BCC7}</ID>
+		<DataVersion>3</DataVersion>
+		<Name>rnChord</Name>
+		<DisplayName>rnChordSuperCustom</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<MaxValue>1.500000e+001</MaxValue>
+		<MinValue>0.000000e+000</MinValue>
+		<DefaultValue>0.000000e+000</DefaultValue>
+	</PrimitiveAttribute>
+	<AttributeField version="3">
+		<ID>{55752A72-3195-4DEB-8301-220DA349043B}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{24CB65C2-4F4F-44FB-81CC-9B6D9EA7BCC7}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<PrimitiveAttribute version="3">
+		<ID>{D65C1592-0F7C-4ECC-9185-F3BF44F021F1}</ID>
+		<DataVersion>5</DataVersion>
+		<Name>rnChordΔSAG</Name>
+		<DisplayName>rnChordΔSAG</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<MaxValue>1.500000e+001</MaxValue>
+		<MinValue>0.000000e+000</MinValue>
+		<DefaultValue>5.000000e+000</DefaultValue>
+	</PrimitiveAttribute>
+	<AttributeField version="3">
+		<ID>{3502476B-3F03-4904-A44E-EE2D7075CDFE}</ID>
+		<DataVersion>5</DataVersion>
+		<AttributeID>{D65C1592-0F7C-4ECC-9185-F3BF44F021F1}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{584D867B-3DE6-4D85-9A9D-CB169A3C4EFB}</ID>
+		<DataVersion>37</DataVersion>
+		<Name>rnKfStd</Name>
+		<DisplayName>rnKfStd</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>337.5/(((1-(0.55)^2)*(-AverageCornealHeight(Flat_Angle, rnTD/2))^2+(rnTD/2)^2)/(2*(-AverageCornealHeight(Flat_Angle, rnTD/2))))</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{4F472FD0-4E10-4859-B455-62D3527A986A}</ID>
+		<DataVersion>37</DataVersion>
+		<AttributeID>{584D867B-3DE6-4D85-9A9D-CB169A3C4EFB}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{A9B847FE-D7EC-44EE-BAB7-A66E3EC69A8C}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>rnPupil</Name>
+		<DisplayName>rnPupil</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Pupil.Width</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{088BF1BD-1382-45FC-99DA-9043A0BA3C27}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{A9B847FE-D7EC-44EE-BAB7-A66E3EC69A8C}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{34B2B743-3208-4A35-856B-C367A4D95598}</ID>
+		<DataVersion>6</DataVersion>
+		<Name>rnSagC</Name>
+		<DisplayName>rnSagC</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>AverageCornealHeight(Flat_Angle, rnChord/2) * -1000</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{35325464-A221-4007-A75D-EBCB054C9A03}</ID>
+		<DataVersion>6</DataVersion>
+		<AttributeID>{34B2B743-3208-4A35-856B-C367A4D95598}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>µm</Units>
+		<ClassifyFunction>ClassifyBetween(Value,  900, 1100, 1400, 1600)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{0B4CB62D-6BDE-4769-AB32-5FF9C0E1C8E1}</ID>
+		<DataVersion>5</DataVersion>
+		<Name>rnSagExFlat</Name>
+		<DisplayName>rnSagExFlat</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>sqrt(1-(2*(337.5/FlatK)*(AverageCornealHeight(Flat_Angle, rnTD/2)*-1000/1000)-(rnTD/2)^2)/((AverageCornealHeight(Flat_Angle, rnTD/2)*-1000/1000)^2))</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{2506377E-F48E-4D25-BBC0-E8E5837F5FD4}</ID>
+		<DataVersion>5</DataVersion>
+		<AttributeID>{0B4CB62D-6BDE-4769-AB32-5FF9C0E1C8E1}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{D437BFC9-E8DA-4D4A-A993-A01B8836C58D}</ID>
+		<DataVersion>9</DataVersion>
+		<Name>rnSagExSteep</Name>
+		<DisplayName>rnSagExSteep</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>SQRT(1-(2*(337.5/ SteepK())*((((337.5/ FlatK())-SQRT((337.5/ FlatK())^2-(1- rnSagExFlat^2)*(0.5* rnChordΔSAG)^2))/(1- rnSagExFlat^2)*1000+((AverageCornealHeight(Steep_Angle, rnChordΔSAG/2) * -1000)-(AverageCornealHeight(Flat_Angle, rnChordΔSAG/2) * -1000)))/1000)-((0.5* rnChordΔSAG)^2))/(((((337.5/ FlatK())-SQRT((337.5/ FlatK())^2-(1- rnSagExFlat^2)*(0.5* rnChordΔSAG)^2))/(1- rnSagExFlat^2)*1000+((AverageCornealHeight(Steep_Angle, rnChordΔSAG/2) * -1000)-(AverageCornealHeight(Flat_Angle, rnChordΔSAG/2) * -1000)))/1000)^2))</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{E1E97DCE-3610-48D9-9DFD-F6225A8A5175}</ID>
+		<DataVersion>9</DataVersion>
+		<AttributeID>{D437BFC9-E8DA-4D4A-A993-A01B8836C58D}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{BDBA2F57-D4F1-40EB-B7B8-7B4BFDBA7117}</ID>
+		<DataVersion>7</DataVersion>
+		<Name>rnSagFlatAC</Name>
+		<DisplayName>rnSagFlatAC</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>1000*(CornealHeight(FlatAngle, rnChord/2) - CornealHeight(FlatAngle+180, rnChord/2))</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{E80B28E8-390C-414C-8CDD-9EA9776C878D}</ID>
+		<DataVersion>7</DataVersion>
+		<AttributeID>{BDBA2F57-D4F1-40EB-B7B8-7B4BFDBA7117}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>µm</Units>
+		<ClassifyFunction>ClassifyAbove(Value, 30, 50)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{FE5EA2B6-AF4C-4679-BEC7-E59D7F5B9536}</ID>
+		<DataVersion>3</DataVersion>
+		<Name>rnSagSteepAC</Name>
+		<DisplayName>rnSagSteepAC</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>1000*(CornealHeight(SteepAngle, rnChord/2) - CornealHeight(SteepAngle+180, rnChord/2))</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{5820634A-E4FD-44AB-A469-F410FF50D558}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{FE5EA2B6-AF4C-4679-BEC7-E59D7F5B9536}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>µm</Units>
+		<ClassifyFunction>ClassifyAbove(Value, 30, 50)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<PrimitiveAttribute version="3">
+		<ID>{3E0EDA37-91F7-4F4D-B9FF-510B862EF99C}</ID>
+		<DataVersion>4</DataVersion>
+		<Name>rnTD</Name>
+		<DisplayName>rnTD</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<MaxValue>2.000000e+001</MaxValue>
+		<MinValue>0.000000e+000</MinValue>
+		<DefaultValue>1.080000e+001</DefaultValue>
+	</PrimitiveAttribute>
+	<AttributeField version="3">
+		<ID>{5D88BF35-D6D9-4535-AFE4-950A9E59A9B6}</ID>
+		<DataVersion>4</DataVersion>
+		<AttributeID>{3E0EDA37-91F7-4F4D-B9FF-510B862EF99C}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{1F28B0EC-E762-4AD2-BEBD-F7893D61A4D8}</ID>
+		<DataVersion>5</DataVersion>
+		<Name>VID</Name>
+		<DisplayName>rnVID</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Iris.Radius*2</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{5331326E-ED01-4647-A019-8C4B66C38B1E}</ID>
+		<DataVersion>5</DataVersion>
+		<AttributeID>{1F28B0EC-E762-4AD2-BEBD-F7893D61A4D8}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction>ClassifyBetween(Value,  11.3, 11.4, 12.3, 12.4)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{6C9856A6-B449-49A7-AEE8-8281B4AA530B}</ID>
+		<DataVersion>13</DataVersion>
+		<Name>rnΔKfStd</Name>
+		<DisplayName>rnΔKfStd</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>rnKfStd-Flat_K</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{B7BCE045-A68C-4D7F-A953-44AE4CDD8452}</ID>
+		<DataVersion>13</DataVersion>
+		<AttributeID>{6C9856A6-B449-49A7-AEE8-8281B4AA530B}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction>ClassifyBetween(Value,  -0.51, -0.26, 0.26, 0.51)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{9FC72D4D-DE3C-49E5-8882-92477FFE879B}</ID>
+		<DataVersion>20</DataVersion>
+		<Name>ΔSag7</Name>
+		<DisplayName>rnΔSag7</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>(AverageCornealHeight(Steep_Angle, 3.5) * -1000)-(AverageCornealHeight(Flat_Angle, 3.5) * -1000)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{8787D88C-9477-433D-B2BE-DA6CAB4599A0}</ID>
+		<DataVersion>20</DataVersion>
+		<AttributeID>{9FC72D4D-DE3C-49E5-8882-92477FFE879B}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>µm</Units>
+		<ClassifyFunction>ClassifyAbove(Value,25, 30)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{0B8C12C5-49CA-4AA1-A83B-B5122C38FF4B}</ID>
+		<DataVersion>9</DataVersion>
+		<Name>ΔSag8</Name>
+		<DisplayName>rnΔSag8</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>(AverageCornealHeight(Steep_Angle, 4) * -1000)-(AverageCornealHeight(Flat_Angle, 4) * -1000)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{7263D8FE-E092-492E-888E-5F66376DDD3A}</ID>
+		<DataVersion>9</DataVersion>
+		<AttributeID>{0B8C12C5-49CA-4AA1-A83B-B5122C38FF4B}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>µm</Units>
+		<ClassifyFunction>ClassifyAbove(Value, 25, 30)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{979E6130-E528-4FE2-845C-01778B1F3AB1}</ID>
+		<DataVersion>9</DataVersion>
+		<Name>ΔSag9</Name>
+		<DisplayName>rnΔSag9</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>(AverageCornealHeight(Steep_Angle, 4.5) * -1000)-(AverageCornealHeight(Flat_Angle, 4.5) * -1000)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{59199701-9A88-4B94-8AB2-56E61F712BD7}</ID>
+		<DataVersion>9</DataVersion>
+		<AttributeID>{979E6130-E528-4FE2-845C-01778B1F3AB1}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>µm</Units>
+		<ClassifyFunction>ClassifyAbove(Value, 25, 30)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{440C3689-8708-4481-9796-822612B230E6}</ID>
+		<DataVersion>8</DataVersion>
+		<Name>ΔSagC</Name>
+		<DisplayName>rnΔSagC</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>(AverageCornealHeight(Steep_Angle, rnChord/2) * -1000)-(AverageCornealHeight(Flat_Angle, rnChord/2) * -1000)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{325F69AF-1A2E-4762-A204-11F9DF384628}</ID>
+		<DataVersion>8</DataVersion>
+		<AttributeID>{440C3689-8708-4481-9796-822612B230E6}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>µm</Units>
+		<ClassifyFunction>ClassifyAbove(Value, 25, 30)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{EAA088E4-243C-4788-BC6F-9C5B3FFFCCC6}</ID>
+		<DataVersion>13</DataVersion>
+		<Name>rnΔSAGSuperCustom</Name>
+		<DisplayName>rnΔSAGSuperCustom</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>-((AverageCornealHeight(Flat_Angle, ((rnChord)/2)) * -1000)-(((337.5/Flat_K)-sqrt((337.5/Flat_K)^2-(1- rnSagExFlat^2)*(((rnChord)/2)^2)))/(1- rnSagExFlat^2))*1000)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{83F73A25-32C4-467E-9201-1CB1F0B241C0}</ID>
+		<DataVersion>13</DataVersion>
+		<AttributeID>{EAA088E4-243C-4788-BC6F-9C5B3FFFCCC6}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>μn</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{8158BFAC-FA78-49CD-8BCF-BA46BB47170B}</ID>
+		<DataVersion>7</DataVersion>
+		<Name>rnΔSAGSuperCustomSteep</Name>
+		<DisplayName>rnΔSAGSuperCustomSteep</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>-((AverageCornealHeight(Steep_Angle, ((rnChord)/2)) * -1000)-(((337.5/Steep_K)-sqrt((337.5/Steep_K)^2-(1- rnSagExSteep^2)*(((rnChord)/2)^2)))/(1- rnSagExSteep^2))*1000)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{021DAF4F-303D-4BFA-92FD-AE0782DE98B8}</ID>
+		<DataVersion>7</DataVersion>
+		<AttributeID>{8158BFAC-FA78-49CD-8BCF-BA46BB47170B}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>μn</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+</MedmontStudioExportFile>
