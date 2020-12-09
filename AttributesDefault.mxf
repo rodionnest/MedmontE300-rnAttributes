@@ -1,0 +1,2357 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<MedmontStudioExportFile version="3">
+	<ExpressionAttribute version="3">
+		<ID>{B599298A-B955-4808-8449-3E843E7EFEAA}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Age_when_Tested</Name>
+		<DisplayName>Age when Tested</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>PatientAge()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{DC371A11-5AEE-407B-92B6-A85181AC1600}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{B599298A-B955-4808-8449-3E843E7EFEAA}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>years</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{8FE081C0-4FC8-4CC1-89F6-6BC41527CD77}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>BFS_radius</Name>
+		<DisplayName>BFS radius</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>BestFitSphereRadius()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{F5D157C8-5F19-4275-9AC4-972E8B6070C4}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{8FE081C0-4FC8-4CC1-89F6-6BC41527CD77}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{8A27304C-D200-4297-92E2-D859C0219396}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Chord_Length</Name>
+		<DisplayName>Chord Length</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>2*EHalfChord</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{B9EE8CE4-BD2D-4FAE-BC1E-25BAA62553DA}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{8A27304C-D200-4297-92E2-D859C0219396}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{5C31F6BF-9A93-4F5F-A8F7-CEBAC7B097B0}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Conversions</Name>
+		<DisplayName>Conversions</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>true</CodeBlock>
+		<Expression>Function mmToDiopters (ByVal x As Double) As Double
+            Return 337.6 / x
+            End Function
+
+            Function DioptersToMm (ByVal x As Double) As Double
+            Return 337.6 / x
+            End Function</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{BB1CD991-BDFC-4EA1-9F63-9D7F2CE12F7B}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{5C31F6BF-9A93-4F5F-A8F7-CEBAC7B097B0}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{C21A7BA8-7FD3-4E22-A406-BA4D3AD1854B}</ID>
+		<DataVersion>4</DataVersion>
+		<Name>EH_0_180</Name>
+		<DisplayName>EH 0-180°</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>-1000 * AvgExtrapolatedCornealHeight(0, 0.5 * EH_Chord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{CC6708D1-C197-4BCD-B8D9-7E0DD2BB095B}</ID>
+		<DataVersion>4</DataVersion>
+		<AttributeID>{C21A7BA8-7FD3-4E22-A406-BA4D3AD1854B}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>µm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{9C15E8FF-79CF-4835-B37D-8C399FCE4C39}</ID>
+		<DataVersion>3</DataVersion>
+		<Name>EH_150_330</Name>
+		<DisplayName>EH 150-330°</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>-1000 * AvgExtrapolatedCornealHeight(-30, 0.5 * EH_Chord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{FA04172F-69D4-48A6-A66A-E188691A770D}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{9C15E8FF-79CF-4835-B37D-8C399FCE4C39}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>µm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{45810AB6-74B3-489F-B94F-448FD521E77A}</ID>
+		<DataVersion>3</DataVersion>
+		<Name>EH_30_210</Name>
+		<DisplayName>EH 30-210°</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>-1000 * AvgExtrapolatedCornealHeight(30, 0.5 * EH_Chord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{963EF5E1-A576-466E-8E36-C758F2654608}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{45810AB6-74B3-489F-B94F-448FD521E77A}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>µm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<PrimitiveAttribute version="3">
+		<ID>{00E79998-3E1A-4DBF-ADB3-4C290B23E159}</ID>
+		<DataVersion>2</DataVersion>
+		<Name>EH_Chord</Name>
+		<DisplayName>EH Chord</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<MaxValue>2.000000e+001</MaxValue>
+		<MinValue>9.000000e+000</MinValue>
+		<DefaultValue>1.600000e+001</DefaultValue>
+	</PrimitiveAttribute>
+	<AttributeField version="3">
+		<ID>{F333D139-8958-4705-9BA1-BD2B4D1DC23E}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{00E79998-3E1A-4DBF-ADB3-4C290B23E159}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{91ACDEFD-5443-4373-9687-E06284C8D4BD}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>EH_Functions</Name>
+		<DisplayName>EH Functions</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>true</CodeBlock>
+		<Expression>Function AvgExtrapolatedCornealHeight (ByVal angle as Double, ByVal radius as Double) As Double
+      Dim h1 as Double = ExtrapolatedCornealHeight(angle, radius)
+      Dim h2 as Double = ExtrapolatedCornealHeight(angle + 180, radius)
+      Const bias as Double = 0.666666
+
+      If Math.Abs(h1) &gt; Math.Abs(h2) Then
+      Return bias * h1 + (1.0 - bias) * h2
+      Else
+      Return bias * h2 + (1.0 - bias) * h1
+      End If
+      End Function</Expression>
+	</ExpressionAttribute>
+	<ExpressionAttribute version="3">
+		<ID>{9DCDFDC8-1C4B-4594-A7F2-3484ED819EB5}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Find_Sample_Point_Utilities</Name>
+		<DisplayName>Find Sample Point Utilities</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>true</CodeBlock>
+		<Expression>function FindSamplePoint() as double
+      Dim sSampleChordLength as Double = 8
+
+      while sSampleChordLength &gt; 4
+      if Double.IsNaN(AverageCornealHeight(Flat_Angle, sSampleChordLength / 2)) Or Double.IsNaN(AverageCornealHeight(Steep_Angle, sSampleChordLength / 2))
+      sSampleChordLength = sSampleChordLength - 0.1
+      else
+      exit while
+      end if
+      end while
+
+      return sSampleChordLength
+      end function</Expression>
+	</ExpressionAttribute>
+	<ExpressionAttribute version="3">
+		<ID>{8305F311-F366-442E-BAE2-4536CBE19744}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Flat_Angle</Name>
+		<DisplayName>Flat Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>FlatAngle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{E1F80D7E-3C78-4CA5-87AE-EF8B08479173}</ID>
+		<DataVersion>4</DataVersion>
+		<AttributeID>{8305F311-F366-442E-BAE2-4536CBE19744}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{97401A53-71EF-45A0-91E3-462BFEE32F09}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Flat_e</Name>
+		<DisplayName>Flat e</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Eccentricity(FlatAngle(), EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{9D2BE74B-8D33-462F-BB23-F3F40D499698}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{97401A53-71EF-45A0-91E3-462BFEE32F09}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{3D77A99D-80C3-48DB-B69F-51505074D5B0}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Flat_e_squared</Name>
+		<DisplayName>Flat e²</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>e_Squared(FlatAngle(), EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{4A84736F-FA67-44C8-A937-717CD78D627D}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{3D77A99D-80C3-48DB-B69F-51505074D5B0}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{8DB374A0-A3AC-4E7C-B2FA-7B15934EB811}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Flat_K</Name>
+		<DisplayName>Flat K</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>FlatK()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{176B06C8-BCA5-452C-A688-8FD195A98A1F}</ID>
+		<DataVersion>5</DataVersion>
+		<AttributeID>{8DB374A0-A3AC-4E7C-B2FA-7B15934EB811}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{CD39E8F6-0838-46EA-8127-9A51C88737FA}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Flat_p</Name>
+		<DisplayName>Flat p</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>1-e_Squared(FlatAngle(), EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{387991F0-97FB-463D-9A2C-23863674BDD4}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{CD39E8F6-0838-46EA-8127-9A51C88737FA}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{E1829B4E-E90C-4A97-A5E8-F7AC9A32CE25}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Flat_Q</Name>
+		<DisplayName>Flat Q</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>- e_Squared(FlatAngle(), EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{04E393FA-D318-4E3A-A1D8-2C6A3BD22CAA}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{E1829B4E-E90C-4A97-A5E8-F7AC9A32CE25}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{7141386E-3490-4214-ACB4-CB35587E5968}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Flat_Sag_at_Sample_Point</Name>
+		<DisplayName>Flat Sag at Sample Point</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>AverageCornealHeight(Flat_Angle, FindSamplePoint()/2) * -1000</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{F5E3ED06-167B-4AD5-8652-12FF2FA7392B}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{7141386E-3490-4214-ACB4-CB35587E5968}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>um</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{12B28A66-C307-4343-ACDB-BE94105A7A5D}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Focal_point_x</Name>
+		<DisplayName>Focal point: x</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>FocalPointX()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{1FA42C6B-33F5-4051-AFDF-F23469CCA673}</ID>
+		<DataVersion>4</DataVersion>
+		<AttributeID>{12B28A66-C307-4343-ACDB-BE94105A7A5D}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{CE097604-BB6B-4E4D-B2D0-249CBFD63105}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Focal_point_y</Name>
+		<DisplayName>Focal point: y</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>FocalPointY()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{BB6F181E-B803-4C9F-99B7-450E49A573F3}</ID>
+		<DataVersion>6</DataVersion>
+		<AttributeID>{CE097604-BB6B-4E4D-B2D0-249CBFD63105}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{D6CA3E21-4FD8-4F57-9947-DA43DA59E58F}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Focal_point_z</Name>
+		<DisplayName>Focal point: z</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>FocalPointZ()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{C8B13FA1-1DE6-4C15-9DD9-6263B1F7A8A3}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{D6CA3E21-4FD8-4F57-9947-DA43DA59E58F}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{EBA894CF-9669-4461-98AE-01A27E1C6582}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_0_0</Name>
+		<DisplayName>H (0, 0): Piston</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(0, 0)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{54DA26B5-8146-43C0-AA7B-8D89AED53B5B}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{EBA894CF-9669-4461-98AE-01A27E1C6582}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{FAA930B9-CE80-47A0-B41F-27AE141C5832}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_0_2</Name>
+		<DisplayName>H (0, 2): Defocus</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(0, 2)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{3E118244-5817-464B-AB51-ECB196109593}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{FAA930B9-CE80-47A0-B41F-27AE141C5832}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{FB8F8082-8DC5-4727-86AA-829369E3D69A}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_0_4</Name>
+		<DisplayName>H (0, 4): Spherical aberration</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(0, 4)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{8CA6A5E1-B8A6-4BF8-9454-6FC343D79397}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{FB8F8082-8DC5-4727-86AA-829369E3D69A}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{588EA7A4-E90C-41AC-A257-57A3E2A36D41}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_1_1</Name>
+		<DisplayName>H (1, 1): Tilt</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(1, 1)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{CA9ABC76-B261-4398-AB5E-EC42BB634FC2}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{588EA7A4-E90C-41AC-A257-57A3E2A36D41}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{34D424C5-C322-4CB9-A51D-49F4A4ACFA3C}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_m1_1</Name>
+		<DisplayName>H (-1, 1): Tilt</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(-1, 1)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{8A331F90-7294-4283-B76C-13F38AF167ED}</ID>
+		<DataVersion>5</DataVersion>
+		<AttributeID>{34D424C5-C322-4CB9-A51D-49F4A4ACFA3C}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{E3EE5103-0062-4BD4-B555-939D8DE473E4}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_1_3</Name>
+		<DisplayName>H (1, 3): Coma</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(1, 3)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{CC7FBF2B-AA48-4E18-807E-1A622A8DFB8E}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{E3EE5103-0062-4BD4-B555-939D8DE473E4}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{62D0E2DC-9B86-48CF-9767-A481D78A97F3}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_m1_3</Name>
+		<DisplayName>H (-1, 3): Coma</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(-1, 3)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{3CC0B459-AC72-4646-A5C9-5E2F6CFC7A70}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{62D0E2DC-9B86-48CF-9767-A481D78A97F3}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{3FBB1747-9A4B-44EC-80C1-CEAE0F72D33F}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_2_2</Name>
+		<DisplayName>H (2, 2): Astigmatism</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(2, 2)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{742632D8-63E1-4278-9FAC-55D853B51E40}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{3FBB1747-9A4B-44EC-80C1-CEAE0F72D33F}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{6E27A536-8AE0-4C26-9F49-7253A0A2A745}</ID>
+		<DataVersion>101</DataVersion>
+		<Name>H_m2_2</Name>
+		<DisplayName>H (-2, 2): Astigmatism</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(-2, 2)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{F8F54BEF-78BD-45A5-9178-9714884A7578}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{6E27A536-8AE0-4C26-9F49-7253A0A2A745}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{004F24FE-7A50-4AE8-9B68-189E57D1AED0}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_m2_4</Name>
+		<DisplayName>H (-2, 4): 2-ary astigmatism</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(-2, 4)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{006B1287-9B43-42C7-8CCA-1E196A9494DE}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{004F24FE-7A50-4AE8-9B68-189E57D1AED0}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{2BF6F8D2-3F95-493A-91AC-59B20E7A4E7B}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_2_4</Name>
+		<DisplayName>H (2, 4): 2-ary astigmatism</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(2, 4)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{C2F0C7C1-0648-40AA-928C-E28869FD77B5}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{2BF6F8D2-3F95-493A-91AC-59B20E7A4E7B}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{BB17DE98-4BA3-4386-B68C-DE81CE08AB0A}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_3_3</Name>
+		<DisplayName>H (3, 3): Trefoil</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(3, 3)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{5B18482F-1008-453E-A31E-71216330EA62}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{BB17DE98-4BA3-4386-B68C-DE81CE08AB0A}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{48F8B635-60FE-4B50-9FB2-35CF0138E00F}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_m3_3</Name>
+		<DisplayName>H (-3, 3): Trefoil</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(-3, 3)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{46BF8F1E-69B9-4F98-A1A9-918FC83A4D85}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{48F8B635-60FE-4B50-9FB2-35CF0138E00F}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{DDE9AE73-2E34-4EE2-86F4-C7AEFC91EABB}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_4_4</Name>
+		<DisplayName>H (4, 4): Tetrafoil</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(4, 4)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{94425FAA-1955-42CF-AF75-6E9F351AAF48}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{DDE9AE73-2E34-4EE2-86F4-C7AEFC91EABB}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{94BC4729-45EA-402E-BCAF-BD46A7585442}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>H_m4_4</Name>
+		<DisplayName>H (-4, 4): Tetrafoil</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeHeightOsaCoeff(-4, 4)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{78BF68A7-6CE4-431F-B929-BE372ED3BE8F}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{94BC4729-45EA-402E-BCAF-BD46A7585442}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{9E4AD6FA-9A00-4864-9BB0-87E5132494D9}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Horizontal_e</Name>
+		<DisplayName>Horizontal e</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Eccentricity(0, EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{4A45B002-C25C-4B0F-BE19-298CF94AB2C2}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{9E4AD6FA-9A00-4864-9BB0-87E5132494D9}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{0DDFECD4-D326-49E1-8DFE-EE4D4E8ECA38}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Horizontal_p</Name>
+		<DisplayName>Horizontal p</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>1 - e_Squared(0, EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{B6E19DC8-1837-4465-AA86-5D3F9751A502}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{0DDFECD4-D326-49E1-8DFE-EE4D4E8ECA38}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{4365A00D-ADD3-48FA-B73C-7EFAEC5EE412}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Horizontal_Q</Name>
+		<DisplayName>Horizontal Q</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>- e_Squared(0, EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{7744D608-C6F2-449D-A784-1F0B439E7975}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{4365A00D-ADD3-48FA-B73C-7EFAEC5EE412}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{444D3AFA-C9D0-4031-87FF-0BF544B6E4D8}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>HVID</Name>
+		<DisplayName>HVID</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>2 * Iris.Radius</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{71315CB1-6BDE-4437-899F-FC8F78F6D5A4}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{444D3AFA-C9D0-4031-87FF-0BF544B6E4D8}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<CircleAttribute version="3">
+		<ID>{DD1018FE-ECC4-45B0-9554-A8E549B54C7F}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Iris</Name>
+		<DisplayName>Iris</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<Icon>
+			AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAA
+			ABAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAwMDAAICAgAAAAP8AAP8AAAD//wD/AAAA
+			/wD/AP//AAD///8AAAAAAAAAAAAAAACIiAAAAAAAiIiIiAAAAAh3d3d4gAAAd3eZl3eIAAd3mSIp
+			l3iAB3eSIiKXeIAHeSIAAil3gAf5IAACKXeAB/kigAIpd4AH/5IgIpd3gAf/mSIpl3gAAH//mZ+Z
+			eAAAB/////mZmQAAf///eZmZAAAHd3cJmZn//wAA/D8AAPAPAADgBwAAwAMAAIABAACAAQAAgAEA
+			AIABAACAAQAAgAEAAIADAADAAwAA4AAAAPAAAAD4IAAA
+		</Icon>
+		<CircleAnnotation version="2">
+			<ShapeAnnotation version="3">
+				<AttributeID>{DD1018FE-ECC4-45B0-9554-A8E549B54C7F}</AttributeID>
+				<Locked>false</Locked>
+				<BorderColor>#C7A3C4</BorderColor>
+				<BorderWidth>2</BorderWidth>
+				<BorderStyle>Solid</BorderStyle>
+				<CalloutPolicy>Selected</CalloutPolicy>
+				<CalloutAnnotation version="2">
+					<TextAnnotation version="3">
+						<AttributeID></AttributeID>
+						<Locked>false</Locked>
+						<Text>Iris</Text>
+						<Position>
+							<X>0.000000e+000</X>
+							<Y>0.000000e+000</Y>
+							<Z>0.000000e+000</Z>
+						</Position>
+						<BackColor>#C7A3C4</BackColor>
+						<TextColor>#FFFFFF</TextColor>
+						<BackTransparent>false</BackTransparent>
+						<HorzJustify>Left</HorzJustify>
+						<VertJustify>Top</VertJustify>
+						<Font version="2">
+							<Name>Arial</Name>
+							<Size>1.000000e+001</Size>
+							<Bold>false</Bold>
+							<Italic>false</Italic>
+							<Underline>false</Underline>
+							<Strikethrough>false</Strikethrough>
+						</Font>
+					</TextAnnotation>
+					<TextOffset version="2">
+						<X>30</X>
+						<Y>-30</Y>
+					</TextOffset>
+				</CalloutAnnotation>
+			</ShapeAnnotation>
+			<CentreX>0.000000e+000</CentreX>
+			<CentreY>0.000000e+000</CentreY>
+			<Radius>0.000000e+000</Radius>
+		</CircleAnnotation>
+		<AllowMultiple>false</AllowMultiple>
+	</CircleAttribute>
+	<AttributeField version="3">
+		<ID>{1183B6CE-27B7-42ED-8D2D-83D4A88E9FEC}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{DD1018FE-ECC4-45B0-9554-A8E549B54C7F}</AttributeID>
+		<Type>Radius</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<AttributeField version="3">
+		<ID>{873359D5-842C-45FB-81A5-FA40CA8DE3A0}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{DD1018FE-ECC4-45B0-9554-A8E549B54C7F}</AttributeID>
+		<Type>Area</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm²</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<AttributeField version="3">
+		<ID>{62C3B871-1050-44D7-B543-5333439953FA}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{DD1018FE-ECC4-45B0-9554-A8E549B54C7F}</AttributeID>
+		<Type>Circumference</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<AttributeField version="3">
+		<ID>{17C0ADC5-68F8-4631-8472-5503EC089077}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{DD1018FE-ECC4-45B0-9554-A8E549B54C7F}</AttributeID>
+		<Type>CentreX</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<AttributeField version="3">
+		<ID>{A70DDE4D-604F-4EFF-A164-9E11DFD66B38}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{DD1018FE-ECC4-45B0-9554-A8E549B54C7F}</AttributeID>
+		<Type>CentreY</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{48D2B23B-7C79-4B37-8792-9FB71D3FDFCE}</ID>
+		<DataVersion>101</DataVersion>
+		<Name>IS_Index</Name>
+		<DisplayName>IS Index</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>InferiorSuperiorIndex()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{537C34E5-40E6-4620-9078-D1C554884C56}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{48D2B23B-7C79-4B37-8792-9FB71D3FDFCE}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction>ClassifyAbove(Abs(Value), 1.0, 1.4)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<AreaAttribute version="3">
+		<ID>{A7E1E8EB-ECA4-4D9A-85A0-7723CC06D3BA}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Pupil</Name>
+		<DisplayName>Pupil</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<Icon>
+			AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAA
+			ABAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD//wD/AAAA
+			/wD/AP//AAD///8AAAAAAAAAAAAAAAB3dwAAAAAAd3d3dwAAAAeIiIiHcAAAiIgiIoh3AAiIgiIi
+			KIdwCIgimZIih3AIiCkACSKIcAj4KQAJIohwCPgpcAkiiHAI/yKZmSKIcAj/8iIpmIcAAI//IiKZ
+			hwAACP////mZmQAAj///iZmZAAAIiIgJmZn//wAA/D8AAPAPAADgBwAAwAMAAIABAACAAQAAgAEA
+			AIABAACAAQAAgAEAAIADAADAAwAA4AAAAPAAAAD4IAAA
+		</Icon>
+		<AreaAnnotation version="3">
+			<ShapeAnnotation version="3">
+				<AttributeID>{A7E1E8EB-ECA4-4D9A-85A0-7723CC06D3BA}</AttributeID>
+				<Locked>false</Locked>
+				<BorderColor>Black</BorderColor>
+				<BorderWidth>2</BorderWidth>
+				<BorderStyle>Solid</BorderStyle>
+				<CalloutPolicy>Selected</CalloutPolicy>
+				<CalloutAnnotation version="2">
+					<TextAnnotation version="3">
+						<AttributeID></AttributeID>
+						<Locked>false</Locked>
+						<Text>Pupil</Text>
+						<Position>
+							<X>0.000000e+000</X>
+							<Y>0.000000e+000</Y>
+							<Z>0.000000e+000</Z>
+						</Position>
+						<BackColor>Black</BackColor>
+						<TextColor>White</TextColor>
+						<BackTransparent>false</BackTransparent>
+						<HorzJustify>Left</HorzJustify>
+						<VertJustify>Top</VertJustify>
+						<Font version="2">
+							<Name>Arial</Name>
+							<Size>9.750000e+000</Size>
+							<Bold>true</Bold>
+							<Italic>false</Italic>
+							<Underline>false</Underline>
+							<Strikethrough>false</Strikethrough>
+						</Font>
+					</TextAnnotation>
+					<TextOffset version="2">
+						<X>30</X>
+						<Y>-30</Y>
+					</TextOffset>
+				</CalloutAnnotation>
+			</ShapeAnnotation>
+			<NumPoints>0</NumPoints>
+			<ToolStyle>Curved</ToolStyle>
+			<ShowCentreAlways>true</ShowCentreAlways>
+		</AreaAnnotation>
+		<AllowMultiple>false</AllowMultiple>
+	</AreaAttribute>
+	<AttributeField version="3">
+		<ID>{74FF4D90-7828-4A19-8748-F88096EF7C9F}</ID>
+		<DataVersion>8</DataVersion>
+		<AttributeID>{A7E1E8EB-ECA4-4D9A-85A0-7723CC06D3BA}</AttributeID>
+		<Type>Area</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm²</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<AttributeField version="3">
+		<ID>{D8C97C86-4A17-47ED-99E5-72DE6B33178E}</ID>
+		<DataVersion>8</DataVersion>
+		<AttributeID>{A7E1E8EB-ECA4-4D9A-85A0-7723CC06D3BA}</AttributeID>
+		<Type>Circumference</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<AttributeField version="3">
+		<ID>{5FF602BB-A7C4-4771-8125-746E23D8123D}</ID>
+		<DataVersion>8</DataVersion>
+		<AttributeID>{A7E1E8EB-ECA4-4D9A-85A0-7723CC06D3BA}</AttributeID>
+		<Type>Width</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<AttributeField version="3">
+		<ID>{539FADCF-3ACF-4246-A246-FCF0F766A6E0}</ID>
+		<DataVersion>8</DataVersion>
+		<AttributeID>{A7E1E8EB-ECA4-4D9A-85A0-7723CC06D3BA}</AttributeID>
+		<Type>Height</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<AttributeField version="3">
+		<ID>{F5C826BF-5B77-489D-A233-156DDE4C9CA3}</ID>
+		<DataVersion>7</DataVersion>
+		<AttributeID>{A7E1E8EB-ECA4-4D9A-85A0-7723CC06D3BA}</AttributeID>
+		<Type>CentreX</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<AttributeField version="3">
+		<ID>{BA17B60F-4CFE-448B-B907-A6151A3420EC}</ID>
+		<DataVersion>7</DataVersion>
+		<AttributeID>{A7E1E8EB-ECA4-4D9A-85A0-7723CC06D3BA}</AttributeID>
+		<Type>CentreY</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{B091E8E0-D8AA-4C60-8BD1-AFFE4F7D1AF3}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Sag_Differential_at_8mm</Name>
+		<DisplayName>Sag Differential at 8mm</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Steep_Sag_at_Sample_Point - Flat_Sag_at_Sample_Point</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{05420779-4180-4E3B-B2B4-F20227177F1C}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{B091E8E0-D8AA-4C60-8BD1-AFFE4F7D1AF3}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>um</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{37FBC296-5714-46F3-B967-0E915E0035C1}</ID>
+		<DataVersion>102</DataVersion>
+		<Name>SAI</Name>
+		<DisplayName>SAI</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>SurfaceAsymmetryIndex()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{89A2EEB8-DA19-40A6-B529-D4DB39329231}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{37FBC296-5714-46F3-B967-0E915E0035C1}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction>ClassifyAbove(Value, 0.7, 1.0)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{EA1F5EDC-1DE2-4755-8E07-DA8F120339E8}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Sample_Chord_Length</Name>
+		<DisplayName>Sample Chord Length</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>FindSamplePoint()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{FF3050CD-3517-4915-AF96-CA7FBCFA2B8B}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{EA1F5EDC-1DE2-4755-8E07-DA8F120339E8}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{BCC50CF8-43BE-483D-A5A3-853DE9EC36EB}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Score_Centering</Name>
+		<DisplayName>Score: Centering</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>CenteringScore()*100</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{E7126780-D090-4CE6-A6DC-149B0AB56231}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{BCC50CF8-43BE-483D-A5A3-853DE9EC36EB}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>%</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{6F300623-80A7-4F15-843D-D44D490C4A9B}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Score_Distance</Name>
+		<DisplayName>Score: Distance</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>DistanceScore()*100</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{49D78EF8-807F-4133-A85B-76C04D7B10F0}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{6F300623-80A7-4F15-843D-D44D490C4A9B}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>%</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{6647A812-5B94-4C69-A6E0-9933481FF4A4}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Score_Movement</Name>
+		<DisplayName>Score: Movement</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>MovementScore()*100</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{36B18345-196B-47C0-A748-DB7959173620}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{6647A812-5B94-4C69-A6E0-9933481FF4A4}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>%</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{C7656069-5231-49A9-9C69-460FC4A96B51}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Score_Total</Name>
+		<DisplayName>Score: Total</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>TotalScore()*100</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{2CA3D749-2903-4B1D-9AF5-2E582845DEF6}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{C7656069-5231-49A9-9C69-460FC4A96B51}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>%</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{649F233C-C1AD-4437-A2AE-5B70D5E47BFF}</ID>
+		<DataVersion>101</DataVersion>
+		<Name>SRI</Name>
+		<DisplayName>SRI</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>SurfaceRegularityIndex()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{FA526697-2527-480C-A366-6ED87214DC36}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{649F233C-C1AD-4437-A2AE-5B70D5E47BFF}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction>ClassifyAbove(Value, 0.6, 0.8)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{FE082200-C278-4928-A3ED-7F091EA0816D}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Steep_Angle</Name>
+		<DisplayName>Steep Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>SteepAngle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{6CCC2FA0-DA7E-46B6-A300-6775CD8F2BB5}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{FE082200-C278-4928-A3ED-7F091EA0816D}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{6880E389-79A3-4076-A944-E651DDE57E66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Steep_e</Name>
+		<DisplayName>Steep e</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Eccentricity(SteepAngle(), EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{440CC0B9-1A31-4E05-BF5F-DDD49CBDC372}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{6880E389-79A3-4076-A944-E651DDE57E66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{6286E2A0-24AC-40E0-959F-ACD51E6CC81D}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Steep_e_squared</Name>
+		<DisplayName>Steep e²</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>e_Squared(SteepAngle(), EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{9D8A1DBB-CA4C-4364-B5A0-97C688E83F7B}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{6286E2A0-24AC-40E0-959F-ACD51E6CC81D}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{3DE986A0-EDB6-4173-A848-578B9A048E70}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Steep_K</Name>
+		<DisplayName>Steep K</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>SteepK()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{D58DC427-A3BF-44B0-A408-6A906B4F35D3}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{3DE986A0-EDB6-4173-A848-578B9A048E70}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{0BCA2817-DC73-4F04-B06A-FE0A5D5739CC}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Steep_p</Name>
+		<DisplayName>Steep p</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>1 -  e_Squared(SteepAngle(), EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{C91405A2-2EAB-4777-9B49-80F2A7E00B22}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{0BCA2817-DC73-4F04-B06A-FE0A5D5739CC}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{4F2157E3-6A64-4DC6-B4E2-73A6F4CB55EB}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Steep_Q</Name>
+		<DisplayName>Steep Q</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>-e_Squared(SteepAngle(), EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{4FF7E459-2E28-45BB-9D81-090C0E18B22B}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{4F2157E3-6A64-4DC6-B4E2-73A6F4CB55EB}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{1A6B3200-F6BF-4E33-8ED0-A8D5DC2B27B0}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Steep_Sag_at_Sample_Point</Name>
+		<DisplayName>Steep Sag at Sample Point</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>AverageCornealHeight(Steep_Angle, FindSamplePoint()/2) * -1000</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{DACA10D7-EC86-4CFA-8BAA-3AF31B615F20}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{1A6B3200-F6BF-4E33-8ED0-A8D5DC2B27B0}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>um</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{7FC4B285-58EB-42F1-AAC8-18A6AF14DCE4}</ID>
+		<DataVersion>8</DataVersion>
+		<Name>TFSQ</Name>
+		<DisplayName>TFSQ</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>FilteredAverageTearFilmQuality(0, 3.5, 0, 360)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{FA8FD731-FF08-44E6-9094-20C9459B5F0C}</ID>
+		<DataVersion>7</DataVersion>
+		<AttributeID>{7FC4B285-58EB-42F1-AAC8-18A6AF14DCE4}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>3</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{BA3C3E84-6BB5-4AF4-8041-09C749D8B240}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>TFSQ_Area</Name>
+		<DisplayName>TFSQ Area</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>100 * FilteredTearFilmQualityThresholdArea(0.3, 0, 3.5, 0, 360)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{B5CA7D1F-37A4-4E6A-92E3-EA912BDFDF57}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{BA3C3E84-6BB5-4AF4-8041-09C749D8B240}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{78263F7E-972C-4BEA-841F-1209F51312BC}</ID>
+		<DataVersion>4</DataVersion>
+		<Name>TFSQ_Central</Name>
+		<DisplayName>TFSQ Central</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>FilteredAverageTearFilmQuality(0, 2,  0 , 360)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{15041B36-91E4-441E-8F14-92E3AC347864}</ID>
+		<DataVersion>4</DataVersion>
+		<AttributeID>{78263F7E-972C-4BEA-841F-1209F51312BC}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>3</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{CC79F25C-58EE-43A5-BD89-647257444937}</ID>
+		<DataVersion>9</DataVersion>
+		<Name>TFSQ_Functions</Name>
+		<DisplayName>TFSQ Functions</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>true</CodeBlock>
+		<Expression>Public Const MIN_TFSQ_MOVEMENT_SCORE as Double = 0.75
+            Public Const MIN_TFSQ_AREA as Double = 0.6
+
+            Public Function FilteredAverageTearFilmQuality( _
+            ByVal sMinHalfChord As Double, _
+            ByVal sMaxHalfChord As Double, _
+            ByVal sMinAngle As Double, _
+            ByVal sMaxAngle As Double) As Double
+
+            If MovementScore &gt; MIN_TFSQ_MOVEMENT_SCORE Then
+            Return AverageTearFilmQuality(sMinHalfChord, sMaxHalfChord, sMinAngle, sMaxAngle, MIN_TFSQ_AREA)
+            Else
+            Return Double.NaN
+            End If
+            End Function
+
+            Public Function FilteredMaxTearFilmQuality( _
+            ByVal sMinHalfChord As Double, _
+            ByVal sMaxHalfChord As Double, _
+            ByVal sMinAngle As Double, _
+            ByVal sMaxAngle As Double) As Double
+
+            If MovementScore &gt; MIN_TFSQ_MOVEMENT_SCORE Then
+            Return MaxTearFilmQuality(sMinHalfChord, sMaxHalfChord, sMinAngle, sMaxAngle, MIN_TFSQ_AREA)
+            Else
+            Return Double.NaN
+            End If
+            End Function
+
+            Public Function FilteredTearFilmQualityThresholdArea( _
+            ByVal sThresholdValue as Double, _
+            ByVal sMinHalfChord As Double, _
+            ByVal sMaxHalfChord As Double, _
+            ByVal sMinAngle As Double, _
+            ByVal sMaxAngle As Double) As Double
+
+            If MovementScore &gt; MIN_TFSQ_MOVEMENT_SCORE Then
+            Return TearFilmQualityThresholdArea(sThresholdValue, sMinHalfChord, sMaxHalfChord, sMinAngle, sMaxAngle, MIN_TFSQ_AREA)
+            Else
+            Return Double.NaN
+            End If
+            End Function</Expression>
+	</ExpressionAttribute>
+	<ExpressionAttribute version="3">
+		<ID>{00D370D2-FB5A-457B-B6CE-AD034149BAEB}</ID>
+		<DataVersion>7</DataVersion>
+		<Name>TFSQ_Inferior</Name>
+		<DisplayName>TFSQ Inferior</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>FilteredAverageTearFilmQuality(0, 3.5,  180 , 360)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{D402D895-60BF-4FAD-AA3A-5A1AED3C3646}</ID>
+		<DataVersion>7</DataVersion>
+		<AttributeID>{00D370D2-FB5A-457B-B6CE-AD034149BAEB}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>3</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{BC22848E-1DC6-4CCE-85FB-0FCFF32513E0}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Vertical_e</Name>
+		<DisplayName>Vertical e</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Eccentricity(90, EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{5EC73E7E-5785-41E4-A18F-2181AD148DC4}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{BC22848E-1DC6-4CCE-85FB-0FCFF32513E0}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{8DF20F32-4913-4BCD-A9CE-EECF8349E0A6}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Vertical_p</Name>
+		<DisplayName>Vertical p</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>1- e_Squared(90, EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{BC6FA6D9-2E06-4863-B32F-07C398DEAB48}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{8DF20F32-4913-4BCD-A9CE-EECF8349E0A6}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{4B873672-5797-42AE-9367-2CF8505B13FD}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Vertical_Q</Name>
+		<DisplayName>Vertical Q</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>- Eccentricity(90, EHalfChord)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{6CE53EEC-14DE-4690-8624-8F85936FDCFF}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{4B873672-5797-42AE-9367-2CF8505B13FD}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B1C-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_0_0</Name>
+		<DisplayName>W (0, 0): Piston</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(0, 0)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B1D-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{31B34B1C-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B1A-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_0_2</Name>
+		<DisplayName>W (0, 2): Defocus</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(0, 2)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B1B-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{31B34B1A-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B18-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_0_4</Name>
+		<DisplayName>W (0, 4): Spherical aberration</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(0, 4)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B19-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{31B34B18-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B16-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_1_1</Name>
+		<DisplayName>W (1, 1): Tilt</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(1, 1)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B17-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{31B34B16-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B0A-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_m1_1</Name>
+		<DisplayName>W (-1, 1): Tilt</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(-1, 1)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B0B-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>5</DataVersion>
+		<AttributeID>{31B34B0A-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B14-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_1_3</Name>
+		<DisplayName>W (1, 3): Coma</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(1, 3)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B15-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{31B34B14-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B08-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_m1_3</Name>
+		<DisplayName>W (-1, 3): Coma</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(-1, 3)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B09-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{31B34B08-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B12-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_2_2</Name>
+		<DisplayName>W (2, 2): Astigmatism</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(2, 2)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B13-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{31B34B12-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B06-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>101</DataVersion>
+		<Name>W_m2_2</Name>
+		<DisplayName>W (-2, 2): Astigmatism</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(-2, 2)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B07-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{31B34B06-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B04-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_m2_4</Name>
+		<DisplayName>W (-2, 4): 2-ary astigmatism</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(-2, 4)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B05-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{31B34B04-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B10-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_2_4</Name>
+		<DisplayName>W (2, 4): 2-ary astigmatism</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(2, 4)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B11-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{31B34B10-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B0E-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_3_3</Name>
+		<DisplayName>W (3, 3): Trefoil</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(3, 3)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B0F-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{31B34B0E-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B02-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_m3_3</Name>
+		<DisplayName>W (-3, 3): Trefoil</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(-3, 3)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B03-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{31B34B02-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B0C-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_4_4</Name>
+		<DisplayName>W (4, 4): Tetrafoil</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(4, 4)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B0D-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{31B34B0C-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{31B34B00-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>W_m4_4</Name>
+		<DisplayName>W (-4, 4): Tetrafoil</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>ZernikeWavefrontErrorOsaCoeff(-4, 4)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{31B34B01-36C2-11DA-8CD6-0800200C9A66}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{31B34B00-36C2-11DA-8CD6-0800200C9A66}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>true</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{1ECBCBA2-F12A-4698-B4F1-2DE16EBBC0E2}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_3mm_Flat_1_Angle</Name>
+		<DisplayName>Zone 3mm Flat 1 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone3mmFlat1Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{35B70F74-D709-4231-AFB5-E3919F31F4C3}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{1ECBCBA2-F12A-4698-B4F1-2DE16EBBC0E2}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{729252B3-CCB6-4459-BFEB-8C98CD638981}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_3mm_Flat_1_Power</Name>
+		<DisplayName>Zone 3mm Flat 1 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone3mmFlat1Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{3FA34ACA-645E-4A33-BCBE-0E100864AEF7}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{729252B3-CCB6-4459-BFEB-8C98CD638981}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{785C606A-D2ED-414F-AE4C-E3967E562B9E}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_3mm_Flat_2_Angle</Name>
+		<DisplayName>Zone 3mm Flat 2 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone3mmFlat2Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{7E1EA756-1B4A-4C6D-8B85-84A228315354}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{785C606A-D2ED-414F-AE4C-E3967E562B9E}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{880A8138-048D-440B-98FA-86E824E7200F}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_3mm_Flat_2_Power</Name>
+		<DisplayName>Zone 3mm Flat 2 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone3mmFlat2Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{96AE553D-D883-487A-A19B-B828F0928585}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{880A8138-048D-440B-98FA-86E824E7200F}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{13E7DB02-241B-4B3D-9227-5527589AFACE}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_3mm_Steep_1_Angle</Name>
+		<DisplayName>Zone 3mm Steep 1 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone3mmSteep1Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{8C1682CD-FCB9-405E-BD39-C151499D26C2}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{13E7DB02-241B-4B3D-9227-5527589AFACE}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{D20DD0AC-AFBC-4FF0-94D7-F83840A796AE}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_3mm_Steep_1_Power</Name>
+		<DisplayName>Zone 3mm Steep 1 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone3mmSteep1Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{E72EA187-ED97-4BDB-BB58-514D7EEAD91D}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{D20DD0AC-AFBC-4FF0-94D7-F83840A796AE}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{D050EF33-1D4F-4950-8533-0C5B2F7C0B27}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_3mm_Steep_2_Angle</Name>
+		<DisplayName>Zone 3mm Steep 2 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone3mmSteep2Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{67A71715-4BEA-4703-9683-3B1ACA9BF81A}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{D050EF33-1D4F-4950-8533-0C5B2F7C0B27}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{0C1DF834-950F-4E77-85C8-EAD78192CE7F}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_3mm_Steep_2_Power</Name>
+		<DisplayName>Zone 3mm Steep 2 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone3mmSteep2Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{52C5CD2D-0858-410C-9936-0356EFDAD851}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{0C1DF834-950F-4E77-85C8-EAD78192CE7F}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{8110F6BD-362F-4194-862C-A855342A287B}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_5mm_Flat_1_Angle</Name>
+		<DisplayName>Zone 5mm Flat 1 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone5mmFlat1Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{E276A65D-7DC4-4569-A656-8A1BFF3FB7F6}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{8110F6BD-362F-4194-862C-A855342A287B}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{95E093F7-CF23-47F2-9239-57CBD884DD35}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_5mm_Flat_1_Power</Name>
+		<DisplayName>Zone 5mm Flat 1 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone5mmFlat1Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{2467A2F5-90CC-468F-B786-3253439384B2}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{95E093F7-CF23-47F2-9239-57CBD884DD35}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{DBC11F94-F7EF-480D-B2E3-F27723FFCCE4}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_5mm_Flat_2_Angle</Name>
+		<DisplayName>Zone 5mm Flat 2 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone5mmFlat2Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{4E557FCF-63FC-4E06-8CB2-10289B2BFB41}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{DBC11F94-F7EF-480D-B2E3-F27723FFCCE4}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{7D2F69A3-FCF4-4F9C-832A-71BA98AAFC22}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_5mm_Flat_2_Power</Name>
+		<DisplayName>Zone 5mm Flat 2 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone5mmFlat2Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{AAE69F9C-9480-47EE-ACB9-B9AD5DF41A64}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{7D2F69A3-FCF4-4F9C-832A-71BA98AAFC22}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{D86FF4DB-9C47-4BCB-8ED5-2E983DCC7DCE}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_5mm_Steep_1_Angle</Name>
+		<DisplayName>Zone 5mm Steep 1 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone5mmSteep1Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{267A3477-41B2-400B-B814-CA8349767990}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{D86FF4DB-9C47-4BCB-8ED5-2E983DCC7DCE}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{8ACEE864-0FCC-469C-BBA0-D7900B8CCC2A}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_5mm_Steep_1_Power</Name>
+		<DisplayName>Zone 5mm Steep 1 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone5mmSteep1Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{CF2E90B1-8519-4D34-9469-36A031722556}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{8ACEE864-0FCC-469C-BBA0-D7900B8CCC2A}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{39769C80-05A9-4FB5-9BB9-B2AEF303D785}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_5mm_Steep_2_Angle</Name>
+		<DisplayName>Zone 5mm Steep 2 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone5mmSteep2Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{36755C72-56D2-47B6-94E3-F3FF53F49CE3}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{39769C80-05A9-4FB5-9BB9-B2AEF303D785}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{D836F6B9-3350-4A42-AE96-E0553DCCF005}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_5mm_Steep_2_Power</Name>
+		<DisplayName>Zone 5mm Steep 2 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone5mmSteep2Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{52FBD791-ED0F-4021-A5C6-B10A6A55B13C}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{D836F6B9-3350-4A42-AE96-E0553DCCF005}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{AAD2F7F3-66E1-47C8-84B5-D893855973DE}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_7mm_Flat_1_Angle</Name>
+		<DisplayName>Zone 7mm Flat 1 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone7mmFlat1Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{1BC832FA-9DCD-43F9-92A7-600A80E6DA83}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{AAD2F7F3-66E1-47C8-84B5-D893855973DE}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{5985440E-A66B-40A6-AFBB-1C8BE5D605B9}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_7mm_Flat_1_Power</Name>
+		<DisplayName>Zone 7mm Flat 1 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone7mmFlat1Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{67D1A38F-907A-425B-B7EF-E12A5796BFC3}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{5985440E-A66B-40A6-AFBB-1C8BE5D605B9}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{F3CA604A-7D51-4F36-9D0C-9336CE934AD5}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_7mm_Flat_2_Angle</Name>
+		<DisplayName>Zone 7mm Flat 2 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone7mmFlat2Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{7B5F4C6C-AE70-40C7-800E-148D3BDD0B86}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{F3CA604A-7D51-4F36-9D0C-9336CE934AD5}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{9AAF0463-F932-4C39-9201-EE62ECB6CE9A}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_7mm_Flat_2_Power</Name>
+		<DisplayName>Zone 7mm Flat 2 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone7mmFlat2Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{9BA77606-EA14-4163-9401-911839952183}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{9AAF0463-F932-4C39-9201-EE62ECB6CE9A}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{CB0842C7-732D-4BEC-B8F2-793CC9DBB5AF}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_7mm_Steep_1_Angle</Name>
+		<DisplayName>Zone 7mm Steep 1 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone7mmSteep1Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{29052B5B-5D09-4137-8CBD-4DFC89C03C57}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{CB0842C7-732D-4BEC-B8F2-793CC9DBB5AF}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{145EC187-090D-4CAA-865D-82154CAD6E74}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_7mm_Steep_1_Power</Name>
+		<DisplayName>Zone 7mm Steep 1 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone7mmSteep1Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{2ECF7BDD-82F1-421A-9885-B6596F5448FF}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{145EC187-090D-4CAA-865D-82154CAD6E74}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{9AE25AF7-45ED-45CD-9508-7F874CD0ED67}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_7mm_Steep_2_Angle</Name>
+		<DisplayName>Zone 7mm Steep 2 Angle</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone7mmSteep2Angle()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{65C511EA-2C32-4CFD-B9EC-3F90FD32C1D4}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{9AE25AF7-45ED-45CD-9508-7F874CD0ED67}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{F7676A53-0CB9-4D87-9759-AF7B67B2F6B9}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>Zone_7mm_Steep_2_Power</Name>
+		<DisplayName>Zone 7mm Steep 2 Power</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>Zone7mmSteep2Power()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{F243E7CE-A23E-42A8-A216-1557C1E93CAD}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{F7676A53-0CB9-4D87-9759-AF7B67B2F6B9}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{85F14D9E-E981-49E1-AD3A-586B95FAA909}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Delta_K_in_Diopters</Name>
+		<DisplayName>ΔK</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>SteepK()-FlatK()</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{1717171D-413B-4C6F-9D86-9377F542C4AD}</ID>
+		<DataVersion>4</DataVersion>
+		<AttributeID>{85F14D9E-E981-49E1-AD3A-586B95FAA909}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>1</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{A4B5C402-BA7F-46D3-95BE-8576446E8C5C}</ID>
+		<DataVersion>100</DataVersion>
+		<Name>Delta_K_in_mm</Name>
+		<DisplayName>ΔK in mm</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>DioptersToMm(FlatK()) - DioptersToMm(SteepK())</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{49C8BA55-BEF8-4851-B396-4B5E76917BD3}</ID>
+		<DataVersion>3</DataVersion>
+		<AttributeID>{A4B5C402-BA7F-46D3-95BE-8576446E8C5C}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>mm</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+</MedmontStudioExportFile>
