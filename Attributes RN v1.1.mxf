@@ -43,17 +43,78 @@
 		<StoreValue>true</StoreValue>
 	</AttributeField>
 	<ExpressionAttribute version="3">
+		<ID>{29510E24-F5F2-4D36-881D-B99AF623EC0B}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>rnECSteepSTexEqualFLex</Name>
+		<DisplayName>rnECSteepSTexEqualFLex</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>-((AverageCornealHeight(rnFlaxis+90, ((rnChord)/2)) * -1000)-(((337.5/rnSteepKax)-sqrt((337.5/rnSteepKax)^2-(1- rnSagExFlatAxis^2)*(((rnChord)/2)^2)))/(1- rnSagExFlatAxis^2))*1000)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{77FB2C50-88D0-4E04-A1D2-50D3A3E75295}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{29510E24-F5F2-4D36-881D-B99AF623EC0B}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units></Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{2EA5D19B-2908-4520-B201-E3B0DF3AA05D}</ID>
+		<DataVersion>13</DataVersion>
+		<Name>rnFlatKax</Name>
+		<DisplayName>rnFlatKax</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>337.5/(((AxialCurvature(rnFlaxis, 1.5))+(AxialCurvature(rnFlaxis+180, 1.5)))/2)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{4CDF86B1-02F4-4F52-8B30-D68F29EBAA59}</ID>
+		<DataVersion>13</DataVersion>
+		<AttributeID>{2EA5D19B-2908-4520-B201-E3B0DF3AA05D}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<PrimitiveAttribute version="3">
+		<ID>{3FF97C30-D9B4-468A-9515-A5961A094855}</ID>
+		<DataVersion>2</DataVersion>
+		<Name>rnFlaxis</Name>
+		<DisplayName>rnFlaxis</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<MaxValue>1.790000e+002</MaxValue>
+		<MinValue>0.000000e+000</MinValue>
+		<DefaultValue>0.000000e+000</DefaultValue>
+	</PrimitiveAttribute>
+	<AttributeField version="3">
+		<ID>{C18D9AF5-4480-4FDA-9DA6-005729470351}</ID>
+		<DataVersion>2</DataVersion>
+		<AttributeID>{3FF97C30-D9B4-468A-9515-A5961A094855}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>0</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>°</Units>
+		<ClassifyFunction></ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
 		<ID>{584D867B-3DE6-4D85-9A9D-CB169A3C4EFB}</ID>
-		<DataVersion>37</DataVersion>
+		<DataVersion>38</DataVersion>
 		<Name>rnKfStd</Name>
 		<DisplayName>rnKfStd</DisplayName>
 		<EntryType>E300Exam</EntryType>
 		<CodeBlock>false</CodeBlock>
-		<Expression>337.5/(((1-(0.55)^2)*(-AverageCornealHeight(Flat_Angle, rnTD/2))^2+(rnTD/2)^2)/(2*(-AverageCornealHeight(Flat_Angle, rnTD/2))))</Expression>
+		<Expression>337.5/(((1-(0.55)^2)*(-AverageCornealHeight(rnFlaxis, rnTD/2))^2+(rnTD/2)^2)/(2*(-AverageCornealHeight(rnFlaxis, rnTD/2))))</Expression>
 	</ExpressionAttribute>
 	<AttributeField version="3">
 		<ID>{4F472FD0-4E10-4859-B455-62D3527A986A}</ID>
-		<DataVersion>37</DataVersion>
+		<DataVersion>38</DataVersion>
 		<AttributeID>{584D867B-3DE6-4D85-9A9D-CB169A3C4EFB}</AttributeID>
 		<Type>Value</Type>
 		<DecimalPlaces>2</DecimalPlaces>
@@ -84,16 +145,16 @@
 	</AttributeField>
 	<ExpressionAttribute version="3">
 		<ID>{34B2B743-3208-4A35-856B-C367A4D95598}</ID>
-		<DataVersion>6</DataVersion>
+		<DataVersion>7</DataVersion>
 		<Name>rnSagC</Name>
 		<DisplayName>rnSagC</DisplayName>
 		<EntryType>E300Exam</EntryType>
 		<CodeBlock>false</CodeBlock>
-		<Expression>AverageCornealHeight(Flat_Angle, rnChord/2) * -1000</Expression>
+		<Expression>AverageCornealHeight(rnFlaxis, rnChord/2) * -1000</Expression>
 	</ExpressionAttribute>
 	<AttributeField version="3">
 		<ID>{35325464-A221-4007-A75D-EBCB054C9A03}</ID>
-		<DataVersion>6</DataVersion>
+		<DataVersion>7</DataVersion>
 		<AttributeID>{34B2B743-3208-4A35-856B-C367A4D95598}</AttributeID>
 		<Type>Value</Type>
 		<DecimalPlaces>0</DecimalPlaces>
@@ -103,18 +164,18 @@
 		<StoreValue>true</StoreValue>
 	</AttributeField>
 	<ExpressionAttribute version="3">
-		<ID>{0B4CB62D-6BDE-4769-AB32-5FF9C0E1C8E1}</ID>
-		<DataVersion>5</DataVersion>
-		<Name>rnSagExFlat</Name>
-		<DisplayName>rnSagExFlat</DisplayName>
+		<ID>{3664F677-BEDD-4F47-A18D-09DFD0C2812A}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>rnSagExFlatAxis</Name>
+		<DisplayName>rnSagExFlatAxis</DisplayName>
 		<EntryType>E300Exam</EntryType>
 		<CodeBlock>false</CodeBlock>
-		<Expression>sqrt(1-(2*(337.5/FlatK)*(AverageCornealHeight(Flat_Angle, rnTD/2)*-1000/1000)-(rnTD/2)^2)/((AverageCornealHeight(Flat_Angle, rnTD/2)*-1000/1000)^2))</Expression>
+		<Expression>sqrt(1-(2*(337.5/rnFlatKax)*(AverageCornealHeight(rnFlaxis, rnTD/2)*-1000/1000)-(rnTD/2)^2)/((AverageCornealHeight(rnFlaxis, rnTD/2)*-1000/1000)^2))</Expression>
 	</ExpressionAttribute>
 	<AttributeField version="3">
-		<ID>{2506377E-F48E-4D25-BBC0-E8E5837F5FD4}</ID>
-		<DataVersion>5</DataVersion>
-		<AttributeID>{0B4CB62D-6BDE-4769-AB32-5FF9C0E1C8E1}</AttributeID>
+		<ID>{00CEC18D-F972-4D60-AA43-31C9E410DF67}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{3664F677-BEDD-4F47-A18D-09DFD0C2812A}</AttributeID>
 		<Type>Value</Type>
 		<DecimalPlaces>2</DecimalPlaces>
 		<ScientificFormat>false</ScientificFormat>
@@ -123,18 +184,18 @@
 		<StoreValue>true</StoreValue>
 	</AttributeField>
 	<ExpressionAttribute version="3">
-		<ID>{D437BFC9-E8DA-4D4A-A993-A01B8836C58D}</ID>
-		<DataVersion>9</DataVersion>
-		<Name>rnSagExSteep</Name>
-		<DisplayName>rnSagExSteep</DisplayName>
+		<ID>{665C51C7-EF48-4CE8-BC27-FCC79225E3EC}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>rnSagExSteepAxis</Name>
+		<DisplayName>rnSagExSteepAxis</DisplayName>
 		<EntryType>E300Exam</EntryType>
 		<CodeBlock>false</CodeBlock>
-		<Expression>SQRT(1-(2*(337.5/ SteepK())*((((337.5/ FlatK())-SQRT((337.5/ FlatK())^2-(1- rnSagExFlat^2)*(0.5* rnChordΔSAG)^2))/(1- rnSagExFlat^2)*1000+((AverageCornealHeight(Steep_Angle, rnChordΔSAG/2) * -1000)-(AverageCornealHeight(Flat_Angle, rnChordΔSAG/2) * -1000)))/1000)-((0.5* rnChordΔSAG)^2))/(((((337.5/ FlatK())-SQRT((337.5/ FlatK())^2-(1- rnSagExFlat^2)*(0.5* rnChordΔSAG)^2))/(1- rnSagExFlat^2)*1000+((AverageCornealHeight(Steep_Angle, rnChordΔSAG/2) * -1000)-(AverageCornealHeight(Flat_Angle, rnChordΔSAG/2) * -1000)))/1000)^2))</Expression>
+		<Expression>SQRT(1-(2*(337.5/ rnSteepKax)*((((337.5/ rnFlatKax)-SQRT((337.5/ rnFlatKax)^2-(1- rnSagExFlatAxis^2)*(0.5* rnChordΔSAG)^2))/(1- rnSagExFlatAxis^2)*1000+((AverageCornealHeight(rnFlaxis+90, rnChordΔSAG/2) * -1000)-(AverageCornealHeight(rnFlaxis, rnChordΔSAG/2) * -1000)))/1000)-((0.5* rnChordΔSAG)^2))/(((((337.5/ rnFlatKax)-SQRT((337.5/ rnFlatKax)^2-(1- rnSagExFlatAxis^2)*(0.5* rnChordΔSAG)^2))/(1- rnSagExFlatAxis^2)*1000+((AverageCornealHeight(rnFlaxis, rnChordΔSAG/2) * -1000)-(AverageCornealHeight(rnFlaxis, rnChordΔSAG/2) * -1000)))/1000)^2))</Expression>
 	</ExpressionAttribute>
 	<AttributeField version="3">
-		<ID>{E1E97DCE-3610-48D9-9DFD-F6225A8A5175}</ID>
-		<DataVersion>9</DataVersion>
-		<AttributeID>{D437BFC9-E8DA-4D4A-A993-A01B8836C58D}</AttributeID>
+		<ID>{F8F1367E-FBCD-462C-9BB2-0BC71A3B71BD}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{665C51C7-EF48-4CE8-BC27-FCC79225E3EC}</AttributeID>
 		<Type>Value</Type>
 		<DecimalPlaces>2</DecimalPlaces>
 		<ScientificFormat>false</ScientificFormat>
@@ -144,42 +205,62 @@
 	</AttributeField>
 	<ExpressionAttribute version="3">
 		<ID>{BDBA2F57-D4F1-40EB-B7B8-7B4BFDBA7117}</ID>
-		<DataVersion>7</DataVersion>
+		<DataVersion>9</DataVersion>
 		<Name>rnSagFlatAC</Name>
 		<DisplayName>rnSagFlatAC</DisplayName>
 		<EntryType>E300Exam</EntryType>
 		<CodeBlock>false</CodeBlock>
-		<Expression>1000*(CornealHeight(FlatAngle, rnChord/2) - CornealHeight(FlatAngle+180, rnChord/2))</Expression>
+		<Expression>1000*(CornealHeight(rnFlaxis, rnChord/2) - CornealHeight(rnFlaxis+180, rnChord/2))</Expression>
 	</ExpressionAttribute>
 	<AttributeField version="3">
 		<ID>{E80B28E8-390C-414C-8CDD-9EA9776C878D}</ID>
-		<DataVersion>7</DataVersion>
+		<DataVersion>9</DataVersion>
 		<AttributeID>{BDBA2F57-D4F1-40EB-B7B8-7B4BFDBA7117}</AttributeID>
 		<Type>Value</Type>
 		<DecimalPlaces>0</DecimalPlaces>
 		<ScientificFormat>false</ScientificFormat>
 		<Units>µm</Units>
-		<ClassifyFunction>ClassifyAbove(Value, 30, 50)</ClassifyFunction>
+		<ClassifyFunction>ClassifyBetween(Value,  -50, -30, 30, 50)</ClassifyFunction>
 		<StoreValue>true</StoreValue>
 	</AttributeField>
 	<ExpressionAttribute version="3">
 		<ID>{FE5EA2B6-AF4C-4679-BEC7-E59D7F5B9536}</ID>
-		<DataVersion>3</DataVersion>
+		<DataVersion>5</DataVersion>
 		<Name>rnSagSteepAC</Name>
 		<DisplayName>rnSagSteepAC</DisplayName>
 		<EntryType>E300Exam</EntryType>
 		<CodeBlock>false</CodeBlock>
-		<Expression>1000*(CornealHeight(SteepAngle, rnChord/2) - CornealHeight(SteepAngle+180, rnChord/2))</Expression>
+		<Expression>1000*(CornealHeight(rnFlaxis+90, rnChord/2) - CornealHeight(rnFlaxis+270, rnChord/2))</Expression>
 	</ExpressionAttribute>
 	<AttributeField version="3">
 		<ID>{5820634A-E4FD-44AB-A469-F410FF50D558}</ID>
-		<DataVersion>3</DataVersion>
+		<DataVersion>5</DataVersion>
 		<AttributeID>{FE5EA2B6-AF4C-4679-BEC7-E59D7F5B9536}</AttributeID>
 		<Type>Value</Type>
 		<DecimalPlaces>0</DecimalPlaces>
 		<ScientificFormat>false</ScientificFormat>
 		<Units>µm</Units>
-		<ClassifyFunction>ClassifyAbove(Value, 30, 50)</ClassifyFunction>
+		<ClassifyFunction>ClassifyBetween(Value,  -50, -30, 30, 50)</ClassifyFunction>
+		<StoreValue>true</StoreValue>
+	</AttributeField>
+	<ExpressionAttribute version="3">
+		<ID>{6FAA0709-0F17-433D-B314-17A0AE431DCE}</ID>
+		<DataVersion>1</DataVersion>
+		<Name>rnSteepKax</Name>
+		<DisplayName>rnSteepKax</DisplayName>
+		<EntryType>E300Exam</EntryType>
+		<CodeBlock>false</CodeBlock>
+		<Expression>337.5/(((AxialCurvature(rnFlaxis+90, 1.5))+(AxialCurvature(rnFlaxis+270, 1.5)))/2)</Expression>
+	</ExpressionAttribute>
+	<AttributeField version="3">
+		<ID>{54EA4DFE-2073-4759-A615-7FBB715ACB8A}</ID>
+		<DataVersion>1</DataVersion>
+		<AttributeID>{6FAA0709-0F17-433D-B314-17A0AE431DCE}</AttributeID>
+		<Type>Value</Type>
+		<DecimalPlaces>2</DecimalPlaces>
+		<ScientificFormat>false</ScientificFormat>
+		<Units>D</Units>
+		<ClassifyFunction></ClassifyFunction>
 		<StoreValue>true</StoreValue>
 	</AttributeField>
 	<PrimitiveAttribute version="3">
@@ -225,16 +306,16 @@
 	</AttributeField>
 	<ExpressionAttribute version="3">
 		<ID>{6C9856A6-B449-49A7-AEE8-8281B4AA530B}</ID>
-		<DataVersion>13</DataVersion>
+		<DataVersion>14</DataVersion>
 		<Name>rnΔKfStd</Name>
 		<DisplayName>rnΔKfStd</DisplayName>
 		<EntryType>E300Exam</EntryType>
 		<CodeBlock>false</CodeBlock>
-		<Expression>rnKfStd-Flat_K</Expression>
+		<Expression>rnKfStd-rnFlatKax</Expression>
 	</ExpressionAttribute>
 	<AttributeField version="3">
 		<ID>{B7BCE045-A68C-4D7F-A953-44AE4CDD8452}</ID>
-		<DataVersion>13</DataVersion>
+		<DataVersion>14</DataVersion>
 		<AttributeID>{6C9856A6-B449-49A7-AEE8-8281B4AA530B}</AttributeID>
 		<Type>Value</Type>
 		<DecimalPlaces>2</DecimalPlaces>
@@ -244,37 +325,17 @@
 		<StoreValue>true</StoreValue>
 	</AttributeField>
 	<ExpressionAttribute version="3">
-		<ID>{9FC72D4D-DE3C-49E5-8882-92477FFE879B}</ID>
-		<DataVersion>20</DataVersion>
-		<Name>ΔSag7</Name>
-		<DisplayName>rnΔSag7</DisplayName>
-		<EntryType>E300Exam</EntryType>
-		<CodeBlock>false</CodeBlock>
-		<Expression>(AverageCornealHeight(Steep_Angle, 3.5) * -1000)-(AverageCornealHeight(Flat_Angle, 3.5) * -1000)</Expression>
-	</ExpressionAttribute>
-	<AttributeField version="3">
-		<ID>{8787D88C-9477-433D-B2BE-DA6CAB4599A0}</ID>
-		<DataVersion>20</DataVersion>
-		<AttributeID>{9FC72D4D-DE3C-49E5-8882-92477FFE879B}</AttributeID>
-		<Type>Value</Type>
-		<DecimalPlaces>0</DecimalPlaces>
-		<ScientificFormat>false</ScientificFormat>
-		<Units>µm</Units>
-		<ClassifyFunction>ClassifyAbove(Value,25, 30)</ClassifyFunction>
-		<StoreValue>true</StoreValue>
-	</AttributeField>
-	<ExpressionAttribute version="3">
 		<ID>{0B8C12C5-49CA-4AA1-A83B-B5122C38FF4B}</ID>
-		<DataVersion>9</DataVersion>
+		<DataVersion>12</DataVersion>
 		<Name>ΔSag8</Name>
 		<DisplayName>rnΔSag8</DisplayName>
 		<EntryType>E300Exam</EntryType>
 		<CodeBlock>false</CodeBlock>
-		<Expression>(AverageCornealHeight(Steep_Angle, 4) * -1000)-(AverageCornealHeight(Flat_Angle, 4) * -1000)</Expression>
+		<Expression>(AverageCornealHeight(rnFlaxis+90, 4) * -1000)-(AverageCornealHeight(rnFlaxis, 4) * -1000)</Expression>
 	</ExpressionAttribute>
 	<AttributeField version="3">
 		<ID>{7263D8FE-E092-492E-888E-5F66376DDD3A}</ID>
-		<DataVersion>9</DataVersion>
+		<DataVersion>12</DataVersion>
 		<AttributeID>{0B8C12C5-49CA-4AA1-A83B-B5122C38FF4B}</AttributeID>
 		<Type>Value</Type>
 		<DecimalPlaces>0</DecimalPlaces>
@@ -284,37 +345,17 @@
 		<StoreValue>true</StoreValue>
 	</AttributeField>
 	<ExpressionAttribute version="3">
-		<ID>{979E6130-E528-4FE2-845C-01778B1F3AB1}</ID>
-		<DataVersion>9</DataVersion>
-		<Name>ΔSag9</Name>
-		<DisplayName>rnΔSag9</DisplayName>
-		<EntryType>E300Exam</EntryType>
-		<CodeBlock>false</CodeBlock>
-		<Expression>(AverageCornealHeight(Steep_Angle, 4.5) * -1000)-(AverageCornealHeight(Flat_Angle, 4.5) * -1000)</Expression>
-	</ExpressionAttribute>
-	<AttributeField version="3">
-		<ID>{59199701-9A88-4B94-8AB2-56E61F712BD7}</ID>
-		<DataVersion>9</DataVersion>
-		<AttributeID>{979E6130-E528-4FE2-845C-01778B1F3AB1}</AttributeID>
-		<Type>Value</Type>
-		<DecimalPlaces>0</DecimalPlaces>
-		<ScientificFormat>false</ScientificFormat>
-		<Units>µm</Units>
-		<ClassifyFunction>ClassifyAbove(Value, 25, 30)</ClassifyFunction>
-		<StoreValue>true</StoreValue>
-	</AttributeField>
-	<ExpressionAttribute version="3">
 		<ID>{440C3689-8708-4481-9796-822612B230E6}</ID>
-		<DataVersion>8</DataVersion>
+		<DataVersion>11</DataVersion>
 		<Name>ΔSagC</Name>
 		<DisplayName>rnΔSagC</DisplayName>
 		<EntryType>E300Exam</EntryType>
 		<CodeBlock>false</CodeBlock>
-		<Expression>(AverageCornealHeight(Steep_Angle, rnChord/2) * -1000)-(AverageCornealHeight(Flat_Angle, rnChord/2) * -1000)</Expression>
+		<Expression>(AverageCornealHeight(rnFlaxis+90, rnChord/2) * -1000)-(AverageCornealHeight(rnFlaxis, rnChord/2) * -1000)</Expression>
 	</ExpressionAttribute>
 	<AttributeField version="3">
 		<ID>{325F69AF-1A2E-4762-A204-11F9DF384628}</ID>
-		<DataVersion>8</DataVersion>
+		<DataVersion>11</DataVersion>
 		<AttributeID>{440C3689-8708-4481-9796-822612B230E6}</AttributeID>
 		<Type>Value</Type>
 		<DecimalPlaces>0</DecimalPlaces>
@@ -325,16 +366,16 @@
 	</AttributeField>
 	<ExpressionAttribute version="3">
 		<ID>{EAA088E4-243C-4788-BC6F-9C5B3FFFCCC6}</ID>
-		<DataVersion>13</DataVersion>
+		<DataVersion>14</DataVersion>
 		<Name>rnΔSAGSuperCustom</Name>
 		<DisplayName>rnΔSAGSuperCustom</DisplayName>
 		<EntryType>E300Exam</EntryType>
 		<CodeBlock>false</CodeBlock>
-		<Expression>-((AverageCornealHeight(Flat_Angle, ((rnChord)/2)) * -1000)-(((337.5/Flat_K)-sqrt((337.5/Flat_K)^2-(1- rnSagExFlat^2)*(((rnChord)/2)^2)))/(1- rnSagExFlat^2))*1000)</Expression>
+		<Expression>-((AverageCornealHeight(rnFlaxis, ((rnChord)/2)) * -1000)-(((337.5/rnFlatKax)-sqrt((337.5/rnFlatKax)^2-(1- rnSagExFlatAxis^2)*(((rnChord)/2)^2)))/(1- rnSagExFlatAxis^2))*1000)</Expression>
 	</ExpressionAttribute>
 	<AttributeField version="3">
 		<ID>{83F73A25-32C4-467E-9201-1CB1F0B241C0}</ID>
-		<DataVersion>13</DataVersion>
+		<DataVersion>14</DataVersion>
 		<AttributeID>{EAA088E4-243C-4788-BC6F-9C5B3FFFCCC6}</AttributeID>
 		<Type>Value</Type>
 		<DecimalPlaces>2</DecimalPlaces>
@@ -345,16 +386,16 @@
 	</AttributeField>
 	<ExpressionAttribute version="3">
 		<ID>{8158BFAC-FA78-49CD-8BCF-BA46BB47170B}</ID>
-		<DataVersion>7</DataVersion>
+		<DataVersion>8</DataVersion>
 		<Name>rnΔSAGSuperCustomSteep</Name>
 		<DisplayName>rnΔSAGSuperCustomSteep</DisplayName>
 		<EntryType>E300Exam</EntryType>
 		<CodeBlock>false</CodeBlock>
-		<Expression>-((AverageCornealHeight(Steep_Angle, ((rnChord)/2)) * -1000)-(((337.5/Steep_K)-sqrt((337.5/Steep_K)^2-(1- rnSagExSteep^2)*(((rnChord)/2)^2)))/(1- rnSagExSteep^2))*1000)</Expression>
+		<Expression>-((AverageCornealHeight(rnFlaxis+90, ((rnChord)/2)) * -1000)-(((337.5/rnSteepKax)-sqrt((337.5/rnSteepKax)^2-(1- rnSagExSteepAxis^2)*(((rnChord)/2)^2)))/(1- rnSagExSteepAxis^2))*1000)</Expression>
 	</ExpressionAttribute>
 	<AttributeField version="3">
 		<ID>{021DAF4F-303D-4BFA-92FD-AE0782DE98B8}</ID>
-		<DataVersion>7</DataVersion>
+		<DataVersion>8</DataVersion>
 		<AttributeID>{8158BFAC-FA78-49CD-8BCF-BA46BB47170B}</AttributeID>
 		<Type>Value</Type>
 		<DecimalPlaces>0</DecimalPlaces>
